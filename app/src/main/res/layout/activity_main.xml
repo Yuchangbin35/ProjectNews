@@ -1,18 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/vimg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_public_black_24dp"
+                android:layout_marginTop="10dp"/>
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/vimg2"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv01"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="要闻"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="@color/colorButton"/>
+        <TextView
+            android:id="@+id/tv02"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="推荐"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv01"/>
+        <TextView
+            android:id="@+id/tv03"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="娱乐"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv02"/>
+        <TextView
+            android:id="@+id/tv04"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="体育"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv03"/>
+        <TextView
+            android:id="@+id/tv05"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="体育"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv04"/>
+        <TextView
+            android:id="@+id/tv06"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="体育"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv05"/>
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_toRightOf="@+id/tv06"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/stp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/vimg3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/tx"/>
+        <TextView
+            android:id="@+id/tv07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="新闻01"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/vimg3"/>
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/vimg4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/tx"/>
+        <TextView
+            android:id="@+id/tv08"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="新闻01"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/vimg4"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/vimg5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/tx"/>
+        <TextView
+            android:id="@+id/tv09"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="新闻01"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/vimg5"/>
+    </RelativeLayout>
+
+</LinearLayout>
