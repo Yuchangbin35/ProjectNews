@@ -92,57 +92,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/stp"/>
+
     <RelativeLayout
+        android:id="@+id/buju1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/vimg3"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/tx"/>
+            android:src="@drawable/tx" />
+
         <TextView
             android:id="@+id/tv07"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="新闻01"
-            android:textSize="20dp"
+            android:layout_toRightOf="@+id/vimg3"
             android:gravity="center"
-            android:layout_toRightOf="@+id/vimg3"/>
+            android:text="新闻01"
+            android:textSize="20dp" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/buju2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/vimg4"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/tx"/>
+            android:src="@drawable/tx" />
+
         <TextView
             android:id="@+id/tv08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="新闻01"
-            android:textSize="20dp"
+            android:layout_toRightOf="@+id/vimg4"
             android:gravity="center"
-            android:layout_toRightOf="@+id/vimg4"/>
+            android:text="新闻01"
+            android:textSize="20dp" />
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/buju3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/vimg5"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/tx"/>
+            android:src="@drawable/tx" />
+
         <TextView
             android:id="@+id/tv09"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="新闻01"
-            android:textSize="20dp"
+            android:layout_toRightOf="@+id/vimg5"
             android:gravity="center"
-            android:layout_toRightOf="@+id/vimg5"/>
+            android:text="新闻01"
+            android:textSize="20dp" />
     </RelativeLayout>
 
 </LinearLayout>
