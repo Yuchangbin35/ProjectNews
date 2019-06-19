@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //接口用法：load(getApplicationContext());onPostExecute（）里对数据进行处理
         load(getApplicationContext());
+        TextView tv07 = findViewById(R.id.tv07);
+
     }
 
     private void load(final Context ctx) {
@@ -40,41 +42,46 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected Toutiao doInBackground(Object... strings) {
-                Log.d(TAG, "loadInBackground: create");
                 String url = "http://v.juhe.cn/toutiao/index?type=&key=75756ba35bafd5604b356192a213dc9d";
                 Toutiao c = new chuli(url).get();
                 return c;
+
             }
 
             @Override
             protected void onPostExecute(final Toutiao toutiao) {
 //               对数据进行处理
-                setting(toutiao);
+                setting(toutiao,1);
             }
         };
         task.execute();
     }
 
-    public void setting(final Toutiao toutiao) {
+    public void setting(final Toutiao toutiao,int i) {
         List<Data> da = toutiao.getResult().getData();
+        TextView tvm = findViewById(R.id.tvmain);
         TextView tv07 = findViewById(R.id.tv07);
-        tv07.setText(da.get(1).getTitle());
         TextView tv08 = findViewById(R.id.tv08);
-        tv08.setText(da.get(2).getTitle());
         TextView tv09 = findViewById(R.id.tv09);
-        tv09.setText(da.get(3).getTitle());
+
         ImageView ig1 = findViewById(R.id.vimg3);
         ImageView ig2 = findViewById(R.id.vimg4);
         ImageView ig3 = findViewById(R.id.vimg5);
         ImageView iv = findViewById(R.id.iv);
-        loadpic(da.get(1).getThumbnail_pic_s(), ig1);
-        loadpic(da.get(2).getThumbnail_pic_s(), ig2);
-        loadpic(da.get(3).getThumbnail_pic_s(), ig3);
-        loadpic(da.get(4).getThumbnail_pic_s(), iv);
-//        dianji(tv07, da, 1);
-//        dianji(tv08, da, 2);
-//        dianji(tv09, da, 3);
-//        dianji(iv, da, 4);
+
+        tvm.setText(da.get(i).getTitle());
+        tv07.setText(da.get(i+1).getTitle());
+        tv08.setText(da.get(i+2).getTitle());
+        tv09.setText(da.get(i+3).getTitle());
+
+        loadpic(da.get(i).getThumbnail_pic_s(), iv);
+        loadpic(da.get(i+1).getThumbnail_pic_s(), ig1);
+        loadpic(da.get(i+2).getThumbnail_pic_s(), ig2);
+        loadpic(da.get(i+3).getThumbnail_pic_s(), ig3);
+        dianji(tv07, da, i+1);
+        dianji(tv08, da, i+2);
+        dianji(tv09, da, i+3);
+        dianji(iv, da, i+4);
     }
 
     public void loadpic(String url, ImageView ig) {
@@ -87,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(dt.get(i).getUrl());
+                Intent it = new Intent(MainActivity.this,Web.class);
+                it.putExtra("URL",dt.get(i).getUrl());
                 startActivity(it);
             }
         });
@@ -97,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(dt.get(i).getUrl());
+                Intent it = new Intent(MainActivity.this,Web.class);
+                it.putExtra("URL",dt.get(i).getUrl());
                 startActivity(it);
             }
         });

@@ -16,7 +16,6 @@ public class HtmlService {
                 .build();
         String r = null;
         try (Response response = client.newCall(request).execute()) {
-            Log.d(TAG, "fangwen"+ response.code());
             r= response.body().string();
         } catch (Exception e) {
             Log.d(TAG, "fangwen: ", e);

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -93,10 +97,21 @@
         android:layout_height="wrap_content"
         android:src="@drawable/stp"/>
 
+    <TextView
+        android:id="@+id/tvmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="TextView"
+        android:gravity="center"
+        />
+
     <RelativeLayout
         android:id="@+id/buju1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
 
         <ImageView
             android:id="@+id/vimg3"
@@ -117,7 +132,9 @@
     <RelativeLayout
         android:id="@+id/buju2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
 
         <ImageView
             android:id="@+id/vimg4"
@@ -138,7 +155,9 @@
     <RelativeLayout
         android:id="@+id/buju3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        >
 
         <ImageView
             android:id="@+id/vimg5"
@@ -157,3 +176,4 @@
     </RelativeLayout>
 
 </LinearLayout>
+    </ScrollView >
